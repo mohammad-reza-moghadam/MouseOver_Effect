@@ -1,0 +1,118 @@
+:root {
+    --dark-brown: #040c0e;
+    --creami: #be9063;
+    --gray: #525b56;
+    --dark-gre: #132226;
+    --light-gr: #a4978e;
+    --white: white;
+    --black: black;
+    --blue: #373533;
+    --lightgray: #f1f1f1;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0 10px;
+    margin-top: 50px;
+    color: var(--white);
+}
+
+html{
+    background: var(--lightgray);
+}
+
+h1{
+    font-size: 1.2rem;
+}
+
+a, button {
+    color: inherit;
+}
+
+button{
+    background: none;
+    border: none;
+    font-size: inherit;
+    cursor: pointer;
+    outline: none;
+}
+
+header, header ul, header button {
+    display: flex;
+    align-items: center;
+}
+
+header{
+    justify-content: space-between;
+    max-width: 1000px;
+    padding-left: 15px;
+    margin: 0 auto;
+    border-radius: 5px;
+    background: var(--blue);
+    border-radius: 10px;
+}
+
+header button {
+    padding: 15px;
+    overflow: hidden;
+    transition: filter 0.25s;
+}
+
+header li:nth-child(1) button{
+    background: var(--dark-brown);
+}
+
+header li:nth-child(2) button{
+    background: var(--creami);
+}
+
+header li:nth-child(3) button{
+    background: var(--gray);
+}
+
+header li:nth-child(4) button{
+    background: var(--dark-gre);
+}
+
+header li:nth-child(5) button{
+    background: var(--light-gr);
+}
+
+header button:hover{
+    filter: brightness(110%)
+}
+
+header button svg{
+    fill: var(--white);
+}
+
+header button span{
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s ease-out;
+}
+
+header button:hover span {
+    margin-left: 15px;
+    opacity: 1;
+    visibility: visible;
+}
+
+@media(max-width: 500px){
+    header{
+        justify-content: center;
+        padding-left: 0;        
+    }
+    h1{
+        display: none;
+    }
+}
